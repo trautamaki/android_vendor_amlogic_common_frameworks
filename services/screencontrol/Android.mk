@@ -1,5 +1,6 @@
 LOCAL_PATH:= $(call my-dir)
 
+ifeq ($(TARGET_USE_OSS_AMLOGIC_SCREENCONTROL),true)
 #
 # libscreencontrolservice
 #
@@ -372,3 +373,5 @@ LOCAL_32_BIT_ONLY := true
 LOCAL_CFLAGS += -DANDROID_PLATFORM_SDK_VERSION=$(PLATFORM_SDK_VERSION)
 
 include $(BUILD_EXECUTABLE)
+
+endif

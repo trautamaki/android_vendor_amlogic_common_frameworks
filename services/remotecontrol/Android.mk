@@ -1,4 +1,6 @@
 LOCAL_PATH:= $(call my-dir)
+ifeq ($(TARGET_USE_OSS_AMLOGIC_RC_SERVER),true)
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:= \
@@ -64,5 +66,4 @@ endif
 
 include $(BUILD_EXECUTABLE)
 
-
-
+endif

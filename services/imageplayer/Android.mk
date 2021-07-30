@@ -1,6 +1,8 @@
 LOCAL_PATH:= $(call my-dir)
 # build for image server
 # =========================================================
+ifeq ($(TARGET_USE_OSS_AMLOGIC_IMAGESERVER),true)
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:= \
@@ -72,3 +74,5 @@ include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
 include $(call all-makefiles-under,$(LOCAL_PATH))
+
+endif
